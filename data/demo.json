@@ -1,0 +1,38 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Rynek Główny, Kraków",
+    "description": "Historyczny rynek z Sukiennicami i pomnikiem Adama Mickiewicza. Serce Starego Miasta.",
+    "date": "2024-06-15",
+    "latitude": 50.0619474,
+    "longitude": 19.9368564,
+    "accuracy": 10,
+    "image": null,
+    "imageFile": "demo-1.jpg",
+    "createdAt": 1718452800000
+  },
+  {
+    "id": "demo-2",
+    "title": "Morskie Oko",
+    "description": "Największe jezioro w Tatrach Polskich. Widok na Rysy i Mięguszowieckie Szczyty.",
+    "date": "2024-08-02",
+    "latitude": 49.2019722,
+    "longitude": 20.0713611,
+    "accuracy": 15,
+    "image": null,
+    "imageFile": "demo-2.jpg",
+    "createdAt": 1722614400000
+  },
+  {
+    "id": "demo-3",
+    "title": "Stare Miasto, Gdańsk",
+    "description": "Długi Targ, Fontanna Neptuna i ulica Długa. Trójmiasto.",
+    "date": "2024-07-20",
+    "latitude": 54.3486145,
+    "longitude": 18.6532569,
+    "accuracy": 12,
+    "image": null,
+    "imageFile": "demo-3.jpg",
+    "createdAt": 1721433600000
+  }
+]

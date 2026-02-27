@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- GeoDiary: szczegóły wpisu (mapa Leaflet, zdjęcie, usuń). Skrypty: Leaflet CDN, db.js, ui.js, app.js -->
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="description" content="GeoDiary - szczegóły wpisu">
+  <title>GeoDiary - Szczegóły wpisu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body data-page="details">
+  <header class="header">
+    <h1 class="header__title">GeoDiary</h1>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div id="entry-details" class="entry-details">
+        <!-- Szczegóły wpisu będą ładowane dynamicznie -->
+      </div>
+      <div class="entry-details__map-wrap">
+        <div id="map" class="entry-details__map" style="height: 300px;"></div>
+        <p id="map-no-location" class="entry-details__map-empty" style="display: none;">Brak zapisanej lokalizacji</p>
+      </div>
+      <div class="entry-details__actions">
+        <a href="index.html" class="btn btn--secondary">Powrót</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

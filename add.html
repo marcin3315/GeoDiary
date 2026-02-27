@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- GeoDiary: formularz dodawania wpisu (lokalizacja, kamera). Skrypty: db.js, location.js, camera.js, app.js -->
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="description" content="GeoDiary - dodaj nowe miejsce">
+  <title>GeoDiary - Dodaj wpis</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body data-page="add">
+  <header class="header">
+    <h1 class="header__title">GeoDiary</h1>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2 class="section__title">Nowy wpis</h2>
+      <form id="add-form" class="form">
+        <div class="form__group">
+          <label for="title" class="form__label">Tytuł</label>
+          <input type="text" id="title" name="title" class="form__input" placeholder="Nazwa miejsca" required>
+        </div>
+        <div class="form__group">
+          <label for="description" class="form__label">Opis</label>
+          <textarea id="description" name="description" class="form__textarea" placeholder="Opis miejsca..." rows="4"></textarea>
+        </div>
+        <div class="form__group">
+          <label for="date" class="form__label">Data</label>
+          <input type="date" id="date" name="date" class="form__input" required>
+        </div>
+        <div class="form__group form__group--buttons">
+          <button type="button" id="get-location" class="btn btn--secondary">Pobierz lokalizację</button>
+          <button type="button" id="start-camera" class="btn btn--secondary">Uruchom kamerę</button>
+          <button type="button" id="take-photo" class="btn btn--secondary">Zrób zdjęcie</button>
+        </div>
+        <div class="form__group">
+          <div id="location-info" class="location-info" aria-live="polite"></div>
+        </div>
+        <div class="form__group">
+          <div class="photo-preview">
+            <video id="camera-preview" autoplay playsinline style="display:none;"></video>
+            <canvas id="photo-canvas" style="display:none;"></canvas>
+            <img id="photo-preview" src="" alt="Podgląd zdjęcia" style="display:none;">
+            <span id="photo-placeholder" class="photo-preview__placeholder">Podgląd zdjęcia</span>
+          </div>
+          <div id="camera-error" class="location-info location-info--error" aria-live="polite" style="display:none;"></div>
+        </div>
+        <div class="form__group">
+          <button type="button" id="save-entry" class="btn btn--primary btn--full">Zapisz wpis</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/db.js" defer></script>
+  <script src="js/location.js" defer></script>
+  <script src="js/camera.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

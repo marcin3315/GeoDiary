@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- GeoDiary: strona fallback przy braku sieci (zwracana przez Service Worker). Skrypty: db.js, app.js -->
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="description" content="GeoDiary - brak połączenia">
+  <title>GeoDiary - Offline</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body data-page="offline">
+  <header class="header">
+    <h1 class="header__title">GeoDiary</h1>
+  </header>
+
+  <main class="main main--centered">
+    <section class="section offline-message">
+      <p class="offline-message__text">Brak połączenia z internetem</p>
+      <p class="offline-message__hint">Sprawdź połączenie sieciowe i spróbuj ponownie. Możesz wrócić do listy miejsc, jeśli była wcześniej otwarta.</p>
+      <a href="index.html" class="btn btn--primary">Wróć do listy</a>
+    </section>
+  </main>
+
+  <script src="js/db.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

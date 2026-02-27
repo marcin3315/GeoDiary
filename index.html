@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- GeoDiary: strona główna – lista wpisów. Skrypty: db.js, ui.js, app.js -->
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="description" content="GeoDiary - dziennik miejsc">
+  <title>GeoDiary - Lista miejsc</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body data-page="index">
+  <header class="header">
+    <h1 class="header__title">GeoDiary</h1>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2 class="section__title">Lista miejsc</h2>
+      <div id="entries-list" class="entries-list">
+        <!-- Wpisy będą dodawane dynamicznie -->
+      </div>
+      <a href="add.html" class="btn btn--primary btn--fab" title="Dodaj nowe miejsce" aria-label="Dodaj nowe miejsce">
+        <span class="btn--fab__icon" aria-hidden="true">+</span>
+        <span class="btn--fab__label">Dodaj nowe miejsce</span>
+      </a>
+    </section>
+  </main>
+
+  <script src="js/db.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
